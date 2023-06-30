@@ -63,7 +63,6 @@ class MainActivity : AppCompatActivity() ,DrawerLocker {
             startActivity(intent)
         }
         setContentView(binding.root)
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -23,7 +23,6 @@ class Timer(private var listener: OnTimerUpdateListener) {
         },period, period)
     }
 
-
     fun pause(){
         timer.cancel()
     }

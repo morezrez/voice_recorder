@@ -23,7 +23,6 @@ class VoiceListFragment : Fragment(),
     private lateinit var binding: FragmentVoiceListBinding
     private lateinit var recyclerAdapter: RecyclerAdapter
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,19 +40,13 @@ class VoiceListFragment : Fragment(),
             adapter = recyclerAdapter
             layoutManager = LinearLayoutManager(requireActivity())
         }
-
         registerObserver()
-
     }
 
     private fun registerObserver() {
         voiceListFragmentViewModel.getVoices().observe(viewLifecycleOwner) { voices ->
             voices.let { recyclerAdapter.submitList(it.reversed()) }
         }
-    }
-
-    companion object {
-
     }
 
     override fun setOnLongClicked(id: Int, name: String, dir: String) {
@@ -71,9 +64,4 @@ class VoiceListFragment : Fragment(),
     override fun rename(id: Int, name: String, dir: String, newName: String) {
         voiceListFragmentViewModel.updateVoice(id, newName, name, dir)
     }
-
-
-
 }
-
-

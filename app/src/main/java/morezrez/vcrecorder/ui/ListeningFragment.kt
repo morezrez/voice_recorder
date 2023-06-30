@@ -132,7 +132,4 @@ class ListeningFragment : Fragment() {
 
     companion object {
     }
-
 }
-
-

@@ -28,5 +28,4 @@ class VoiceListFragmentViewModel @Inject constructor(private val repository: Voi
             file.renameTo(file2)
         }
     }
-
 }

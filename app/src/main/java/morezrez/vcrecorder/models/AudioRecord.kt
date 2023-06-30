@@ -3,7 +3,6 @@ package morezrez.vcrecorder.models
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
-import java.sql.Timestamp
 
 @Entity(tableName = "audioRecords")
 data class AudioRecord (

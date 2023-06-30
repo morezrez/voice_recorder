@@ -5,14 +5,11 @@ import android.media.PlaybackParams
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import androidx.annotation.RequiresApi
-import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import morezrez.vcrecorder.R
 import morezrez.vcrecorder.data.repositories.VoiceRepository
 import javax.inject.Inject
 
@@ -24,7 +21,6 @@ class PlayingFragmentViewModel @Inject constructor(repository: VoiceRepository) 
     private lateinit var runnable: Runnable
     private lateinit var handler: Handler
     private var playbackSpeed: Float = 1.0f
-
 
     private val _playing = MutableLiveData(false)
     val playing: LiveData<Boolean> = _playing
@@ -50,7 +46,6 @@ class PlayingFragmentViewModel @Inject constructor(repository: VoiceRepository) 
             handler = Handler(Looper.getMainLooper())
         }
     }
-
 
     fun playPausePlayer() {
         if (!mediaPlayer.isPlaying) {

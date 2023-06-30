@@ -3,14 +3,12 @@ package morezrez.vcrecorder.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import morezrez.vcrecorder.R
-import morezrez.vcrecorder.dialogs.DialogDeleteShareEdit
 import morezrez.vcrecorder.models.AudioRecord
 
 class RecyclerAdapter(private val adapterCommunicatorInterface: AdapterCommunicatorInterface) :
@@ -44,7 +42,6 @@ class RecyclerAdapter(private val adapterCommunicatorInterface: AdapterCommunica
             return@setOnLongClickListener false
         }
     }
-
 
     companion object {
         private val AUDIO_COMPARATOR =

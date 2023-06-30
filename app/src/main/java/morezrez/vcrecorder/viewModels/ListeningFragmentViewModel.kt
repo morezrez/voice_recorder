@@ -17,7 +17,6 @@ import morezrez.vcrecorder.data.repositories.VoiceRepository
 import morezrez.vcrecorder.models.AudioRecord
 import morezrez.vcrecorder.utils.SingleLiveEvent
 import morezrez.vcrecorder.utils.Timer
-import java.io.File
 import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
@@ -37,12 +36,9 @@ class ListeningFragmentViewModel @Inject constructor(private val repository: Voi
 
     private lateinit var fileName: String
     private lateinit var dirPath: String
-
-
     private var recording = false
     private lateinit var timer: Timer
     private var recorder: MediaRecorder? = null
-
     private var refreshRate: Long = 60
 
     fun riveAnimationOnClick() {
@@ -77,7 +73,6 @@ class ListeningFragmentViewModel @Inject constructor(private val repository: Voi
 
     fun stopRecording() {
         val duration = timer.format().split(".")[0]
-
         recording = false
         try {
             recorder?.apply {
@@ -87,17 +82,13 @@ class ListeningFragmentViewModel @Inject constructor(private val repository: Voi
         } catch (e: Exception) {
             Log.d("Stop error", e.toString())
         }
-
         recorder = null
-
         try {
             timer.stop()
         } catch (e: Exception) {
             Log.d("Stop timer error", e.toString())
         }
-
         insertVoice(AudioRecord(fileName, dirPath, Date().time, duration))
-
         _duration.value = "00:00.00"
     }
 
@@ -127,5 +118,4 @@ class ListeningFragmentViewModel @Inject constructor(private val repository: Voi
             repository.insert(audioRecord)
         }
     }
-
 }

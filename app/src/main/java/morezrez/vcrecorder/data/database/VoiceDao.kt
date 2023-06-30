@@ -3,7 +3,6 @@ package morezrez.vcrecorder.data.database
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import morezrez.vcrecorder.models.AudioRecord
-
 @Dao
 interface VoiceDao {
     @Query("SELECT * FROM audioRecords")

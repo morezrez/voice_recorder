@@ -2,13 +2,8 @@ package morezrez.vcrecorder.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.media.MediaPlayer
-import android.media.PlaybackParams
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,21 +14,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LifecycleOwner
-import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import morezrez.vcrecorder.R
 import morezrez.vcrecorder.databinding.FragmentPlayingBinding
 import morezrez.vcrecorder.utils.DrawerLocker
 import morezrez.vcrecorder.viewModels.PlayingFragmentViewModel
 
-
 @AndroidEntryPoint
 class PlayingFragment : Fragment() {
 
     private val playingFragmentViewModel: PlayingFragmentViewModel by viewModels()
     private lateinit var binding: FragmentPlayingBinding
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,7 +50,6 @@ class PlayingFragment : Fragment() {
 
         playingFragmentViewModel.initMediaPlayer(filePath)
 
-
         playingFragmentViewModel.audioSessionId.observe(viewLifecycleOwner) { audioSessionId ->
             if (audioSessionId != -1) {
                 binding.mVisualizer.setAudioSessionId(audioSessionId)
@@ -69,9 +59,6 @@ class PlayingFragment : Fragment() {
         playingFragmentViewModel.duration.observe(viewLifecycleOwner) { duration ->
             binding.seekBar.max = duration
         }
-
-
-
 
         playPausePlayer()
 
@@ -97,20 +84,16 @@ class PlayingFragment : Fragment() {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 if (p2) playingFragmentViewModel.seekTo(p1)
             }
-
             override fun onStartTrackingTouch(p0: SeekBar?) {}
 
             override fun onStopTrackingTouch(p0: SeekBar?) {}
-
         })
 
         binding.chip.setOnClickListener {
             val playbackSpeed = playingFragmentViewModel.chipSpeed()
             binding.chip.text = "x $playbackSpeed "
         }
-
     }
-
 
     private fun playPausePlayer() {
         playingFragmentViewModel.playPausePlayer()
@@ -165,10 +148,5 @@ class PlayingFragment : Fragment() {
     override fun onStop() {
         super.onStop()
         (activity as MainActivity).supportActionBar?.show()
-    }
-
-
-    companion object {
-
     }
 }

@@ -11,7 +11,6 @@ import androidx.fragment.app.DialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import morezrez.vcrecorder.databinding.RenameDialogBinding
 
-
 @AndroidEntryPoint
 class DialogRename(
     private val _id: Int,
@@ -20,7 +19,6 @@ class DialogRename(
     private val dialogCommunicator: DialogRenameCommunicator?
 ) : DialogFragment() {
     private lateinit var binding: RenameDialogBinding
-
 
     override fun onResume() {
         super.onResume()
@@ -51,13 +49,11 @@ class DialogRename(
                 binding.edtNewVoiceTitle.text.toString()
             )
             dialog?.dismiss()
-
         }
         binding.txtCancel.setOnClickListener {
             dialog?.dismiss()
         }
         dialog!!.window?.setBackgroundDrawableResource(morezrez.vcrecorder.R.drawable.dialog_frame2)
-
     }
 }
 
