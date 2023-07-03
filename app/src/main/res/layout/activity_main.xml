@@ -121,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:orientation="horizontal"
-                    android:id="@+id/linear_navigation_contact_us">
+                    android:id="@+id/linear_navigation_rate_us">
 
                     <TextView
                         android:id="@+id/txt_navigation_contact_us"

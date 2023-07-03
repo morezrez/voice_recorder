@@ -53,7 +53,7 @@ class DialogRename(
         binding.txtCancel.setOnClickListener {
             dialog?.dismiss()
         }
-        dialog!!.window?.setBackgroundDrawableResource(morezrez.vcrecorder.R.drawable.dialog_frame2)
+        dialog!!.window?.setBackgroundDrawableResource(morezrez.vcrecorder.R.drawable.dialog_frame)
     }
 }
 

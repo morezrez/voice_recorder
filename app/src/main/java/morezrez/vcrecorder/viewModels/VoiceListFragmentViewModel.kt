@@ -24,7 +24,7 @@ class VoiceListFragmentViewModel @Inject constructor(private val repository: Voi
         viewModelScope.launch{
             repository.updateVoice(newName , id)
             val file = File(dir, oldName)
-            val file2 = File(dir, newName)
+            val file2 = File(dir, "$newName.mp3")
             file.renameTo(file2)
         }
     }

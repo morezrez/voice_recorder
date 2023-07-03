@@ -15,6 +15,8 @@ import app.rive.runtime.kotlin.core.Rive
 import dagger.hilt.android.AndroidEntryPoint
 import morezrez.vcrecorder.R
 import morezrez.vcrecorder.databinding.ActivityMainBinding
+import morezrez.vcrecorder.dialogs.DialogRate
+import morezrez.vcrecorder.dialogs.DialogRename
 import morezrez.vcrecorder.utils.DrawerLocker
 
 
@@ -31,8 +33,6 @@ class MainActivity : AppCompatActivity() ,DrawerLocker {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false);
-
-
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -57,10 +57,19 @@ class MainActivity : AppCompatActivity() ,DrawerLocker {
         }
 
         binding.linearNavigationApps.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("bazaar://collection?slug=by_author&aid=628367061984")
+//            val intent = Intent(Intent.ACTION_VIEW)
+//            intent.data = Uri.parse("bazaar://collection?slug=by_author&aid=628367061984")
+//            intent.setPackage("com.farsitel.bazaar")
+//            startActivity(intent)
+
+            val intent = Intent(Intent.ACTION_EDIT)
+            intent.data = Uri.parse("bazaar://details?id=$packageName")
             intent.setPackage("com.farsitel.bazaar")
             startActivity(intent)
+        }
+
+        binding.linearNavigationRateUs.setOnClickListener {
+            DialogRate().show(this.supportFragmentManager, "my tag")
         }
         setContentView(binding.root)
     }
@@ -69,17 +78,17 @@ class MainActivity : AppCompatActivity() ,DrawerLocker {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
-    fun openDrawer() {
+    private fun openDrawer() {
         binding.drawerLayout.openDrawer(GravityCompat.END)
         openDrawer = true
     }
 
-    fun closeDrawer() {
+    private fun closeDrawer() {
         binding.drawerLayout.closeDrawer(GravityCompat.END)
         openDrawer = false
     }
 
-    fun navigateToListFragment() {
+    private fun navigateToListFragment() {
         val action =
             ListeningFragmentDirections.actionListeningFragmentToVoiceListFragment()
         findNavController(R.id.nav_host_fragment).navigate(action)
@@ -91,7 +100,6 @@ class MainActivity : AppCompatActivity() ,DrawerLocker {
         } else if (openDrawer) {
             closeDrawer()
         }
-
     }
 
     override fun setDrawerEnabled(enabled: Boolean) {

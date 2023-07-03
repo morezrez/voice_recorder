@@ -129,7 +129,4 @@ class ListeningFragment : Fragment() {
         binding.recorderWaveformView.reset()
         listeningFragmentViewModel.stopRecording()
     }
-
-    companion object {
-    }
 }
