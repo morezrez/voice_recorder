@@ -2,4 +2,18 @@
     <string name="app_name">VcRecorder</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exitApp">خروج از برنامه</string>
+    <string name="myVoices">صداهای من</string>
+    <string name="delete">حذف</string>
+    <string name="share">اشتراک گذاری</string>
+    <string name="edit">ویرایش</string>
+    <string name="dialogEdit">ویرایش نام</string>
+    <string name="dialogEnterYourName">نام جدید فایل خود را وارد کنید.</string>
+    <string name="dialogTitleHint">عنوان پوشه</string>
+    <string name="dialogOk">تایید</string>
+    <string name="dialogCancel">انصراف</string>
+    <string name="dialogRenameTitle">ویرایش نام</string>
+    <string name="dialogRateDoYouLove">دوست داری که با دادن ۵ ستاره از برنامه ما حمایت کنی؟</string>
+    <string name="dialogRateOk">آره حتما</string>
+    <string name="dialogRateNo">نه دوسش نداشتم</string>
 </resources>
