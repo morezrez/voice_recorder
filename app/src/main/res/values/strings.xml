@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VcRecorder</string>
+    <string name="app_name">Voice Recorder</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="exitApp">خروج از برنامه</string>
@@ -16,4 +16,20 @@
     <string name="dialogRateDoYouLove">دوست داری که با دادن ۵ ستاره از برنامه ما حمایت کنی؟</string>
     <string name="dialogRateOk">آره حتما</string>
     <string name="dialogRateNo">نه دوسش نداشتم</string>
+
+
+<!--    <string name="exitApp">Exit</string>-->
+<!--    <string name="myVoices">My Voices</string>-->
+<!--    <string name="delete">Delete</string>-->
+<!--    <string name="share">Share</string>-->
+<!--    <string name="edit">Edit</string>-->
+<!--    <string name="dialogEdit">Edit Name</string>-->
+<!--    <string name="dialogEnterYourName">Enter your new file name.</string>-->
+<!--    <string name="dialogTitleHint">File title</string>-->
+<!--    <string name="dialogOk">Ok</string>-->
+<!--    <string name="dialogCancel">Cancel</string>-->
+<!--    <string name="dialogRenameTitle">Edit Name</string>-->
+<!--    <string name="dialogRateDoYouLove">Do you love support us with your 5 star ?</string>-->
+<!--    <string name="dialogRateOk">Yes, sure</string>-->
+<!--    <string name="dialogRateNo">No, i didn\'t love</string>-->
 </resources>

@@ -40,6 +40,7 @@
                     android:layout_alignParentRight="true"/>
 
                 <ImageView
+                    android:layout_alignParentRight="false"
                     android:layout_width="46dp"
                     android:layout_height="46dp"
                     android:layout_centerVertical="true"
@@ -72,6 +73,7 @@
                     android:layout_alignParentRight="true"/>
 
                 <ImageView
+                    android:layout_alignParentRight="false"
                     android:padding="8dp"
                     android:layout_width="46dp"
                     android:layout_height="46dp"
@@ -105,6 +107,7 @@
                     android:layout_alignParentRight="true"/>
 
                 <ImageView
+                    android:layout_alignParentRight="false"
                     android:padding="8dp"
                     android:layout_width="46dp"
                     android:layout_height="46dp"

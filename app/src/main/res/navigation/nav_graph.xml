@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listeningFragment"
-        android:name="morezrez.vcrecorder.ui.ListeningFragment"
+        android:name="morezrez.voicerecorder.ui.ListeningFragment"
         android:label="fragment_listening"
         tools:layout="@layout/fragment_listening" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/voiceListFragment"
-        android:name="morezrez.vcrecorder.ui.VoiceListFragment"
+        android:name="morezrez.voicerecorder.ui.VoiceListFragment"
         android:label="fragment_voice_list"
         tools:layout="@layout/fragment_voice_list" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/playingFragment"
-        android:name="morezrez.vcrecorder.ui.PlayingFragment"
+        android:name="morezrez.voicerecorder.ui.PlayingFragment"
         android:label="fragment_playing"
         tools:layout="@layout/fragment_playing" >
         <argument
