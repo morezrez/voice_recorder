@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() ,DrawerLocker {
     private lateinit var navController: NavController
     private lateinit var binding: ActivityMainBinding
     private var openDrawer: Boolean = false
-    val TAPSELL_KEY = "rffmsnammfiheajphtmqbgqnjeenljnpfegagbogjjljpjnecsjrosmgmmejnchbmqptrk"
+    val TAPSELL_KEY = ""
     val context = this
 
 
